@@ -47,16 +47,16 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'financial_event_group_id' => 'string',
-'processing_status' => 'string',
-'fund_transfer_status' => 'string',
-'original_total' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'converted_total' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'fund_transfer_date' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',
-'trace_id' => 'string',
-'account_tail' => 'string',
-'beginning_balance' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
-'financial_event_group_start' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',
-'financial_event_group_end' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\\DateTime',    ];
+        'processing_status' => 'string',
+        'fund_transfer_status' => 'string',
+        'original_total' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
+        'converted_total' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
+        'fund_transfer_date' => '\DateTime',
+        'trace_id' => 'string',
+        'account_tail' => 'string',
+        'beginning_balance' => '\ClouSale\AmazonSellingPartnerAPI\Models\Finances\Currency',
+        'financial_event_group_start' => '\DateTime',
+        'financial_event_group_end' => '\DateTime',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -65,16 +65,16 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess
      */
     protected static $swaggerFormats = [
         'financial_event_group_id' => null,
-'processing_status' => null,
-'fund_transfer_status' => null,
-'original_total' => null,
-'converted_total' => null,
-'fund_transfer_date' => null,
-'trace_id' => null,
-'account_tail' => null,
-'beginning_balance' => null,
-'financial_event_group_start' => null,
-'financial_event_group_end' => null,    ];
+        'processing_status' => null,
+        'fund_transfer_status' => null,
+        'original_total' => null,
+        'converted_total' => null,
+        'fund_transfer_date' => null,
+        'trace_id' => null,
+        'account_tail' => null,
+        'beginning_balance' => null,
+        'financial_event_group_start' => null,
+        'financial_event_group_end' => null,    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -104,16 +104,16 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'financial_event_group_id' => 'FinancialEventGroupId',
-'processing_status' => 'ProcessingStatus',
-'fund_transfer_status' => 'FundTransferStatus',
-'original_total' => 'OriginalTotal',
-'converted_total' => 'ConvertedTotal',
-'fund_transfer_date' => 'FundTransferDate',
-'trace_id' => 'TraceId',
-'account_tail' => 'AccountTail',
-'beginning_balance' => 'BeginningBalance',
-'financial_event_group_start' => 'FinancialEventGroupStart',
-'financial_event_group_end' => 'FinancialEventGroupEnd',    ];
+        'processing_status' => 'ProcessingStatus',
+        'fund_transfer_status' => 'FundTransferStatus',
+        'original_total' => 'OriginalTotal',
+        'converted_total' => 'ConvertedTotal',
+        'fund_transfer_date' => 'FundTransferDate',
+        'trace_id' => 'TraceId',
+        'account_tail' => 'AccountTail',
+        'beginning_balance' => 'BeginningBalance',
+        'financial_event_group_start' => 'FinancialEventGroupStart',
+        'financial_event_group_end' => 'FinancialEventGroupEnd',    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -122,16 +122,16 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'financial_event_group_id' => 'setFinancialEventGroupId',
-'processing_status' => 'setProcessingStatus',
-'fund_transfer_status' => 'setFundTransferStatus',
-'original_total' => 'setOriginalTotal',
-'converted_total' => 'setConvertedTotal',
-'fund_transfer_date' => 'setFundTransferDate',
-'trace_id' => 'setTraceId',
-'account_tail' => 'setAccountTail',
-'beginning_balance' => 'setBeginningBalance',
-'financial_event_group_start' => 'setFinancialEventGroupStart',
-'financial_event_group_end' => 'setFinancialEventGroupEnd',    ];
+        'processing_status' => 'setProcessingStatus',
+        'fund_transfer_status' => 'setFundTransferStatus',
+        'original_total' => 'setOriginalTotal',
+        'converted_total' => 'setConvertedTotal',
+        'fund_transfer_date' => 'setFundTransferDate',
+        'trace_id' => 'setTraceId',
+        'account_tail' => 'setAccountTail',
+        'beginning_balance' => 'setBeginningBalance',
+        'financial_event_group_start' => 'setFinancialEventGroupStart',
+        'financial_event_group_end' => 'setFinancialEventGroupEnd',    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -140,16 +140,16 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'financial_event_group_id' => 'getFinancialEventGroupId',
-'processing_status' => 'getProcessingStatus',
-'fund_transfer_status' => 'getFundTransferStatus',
-'original_total' => 'getOriginalTotal',
-'converted_total' => 'getConvertedTotal',
-'fund_transfer_date' => 'getFundTransferDate',
-'trace_id' => 'getTraceId',
-'account_tail' => 'getAccountTail',
-'beginning_balance' => 'getBeginningBalance',
-'financial_event_group_start' => 'getFinancialEventGroupStart',
-'financial_event_group_end' => 'getFinancialEventGroupEnd',    ];
+        'processing_status' => 'getProcessingStatus',
+        'fund_transfer_status' => 'getFundTransferStatus',
+        'original_total' => 'getOriginalTotal',
+        'converted_total' => 'getConvertedTotal',
+        'fund_transfer_date' => 'getFundTransferDate',
+        'trace_id' => 'getTraceId',
+        'account_tail' => 'getAccountTail',
+        'beginning_balance' => 'getBeginningBalance',
+        'financial_event_group_start' => 'getFinancialEventGroupStart',
+        'financial_event_group_end' => 'getFinancialEventGroupEnd',    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -218,6 +218,9 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess
         $this->container['beginning_balance'] = isset($data['beginning_balance']) ? $data['beginning_balance'] : null;
         $this->container['financial_event_group_start'] = isset($data['financial_event_group_start']) ? $data['financial_event_group_start'] : null;
         $this->container['financial_event_group_end'] = isset($data['financial_event_group_end']) ? $data['financial_event_group_end'] : null;
+
+
+
     }
 
     /**
@@ -262,6 +265,7 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess
      */
     public function setFinancialEventGroupId($financial_event_group_id)
     {
+
         $this->container['financial_event_group_id'] = $financial_event_group_id;
 
         return $this;
