@@ -164,6 +164,8 @@ class ReportList implements ModelInterface, ArrayAccess, IterableType
      */
     public function listInvalidProperties()
     {
+
+        return [];
         $invalidProperties = parent::listInvalidProperties();
 
         return $invalidProperties;
