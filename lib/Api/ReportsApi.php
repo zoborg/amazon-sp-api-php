@@ -29,6 +29,7 @@ use ClouSale\AmazonSellingPartnerAPI\Models\Reports\GetReportResponse;
 use ClouSale\AmazonSellingPartnerAPI\Models\Reports\GetReportScheduleResponse;
 use ClouSale\AmazonSellingPartnerAPI\Models\Reports\GetReportSchedulesResponse;
 use ClouSale\AmazonSellingPartnerAPI\Models\Reports\GetReportsResponse;
+use ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportDocument;
 use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -602,13 +603,14 @@ class ReportsApi
      * @throws \InvalidArgumentException
      * @throws ApiException              on non-2xx response
      *
-     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Reports\GetReportDocumentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Reports\ReportDocument, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReportDocumentWithHttpInfo($report_document_id)
     {
         $request = $this->getReportDocumentRequest($report_document_id);
 
-        return $this->sendRequest($request, GetReportDocumentResponse::class);
+        $result = $this->sendRequest($request, ReportDocument::class);
+        return $result;
     }
 
     /**
