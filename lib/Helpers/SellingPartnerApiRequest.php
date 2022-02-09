@@ -122,6 +122,8 @@ trait SellingPartnerApiRequest
                     $content = json_decode($content);
                 }
             }
+
+            $x = 1;
 //            var_dump($content);
 //            exit();
 

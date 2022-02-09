@@ -79,7 +79,8 @@ class Order implements ModelInterface, ArrayAccess
 'promise_response_due_date' => 'string',
 'is_estimated_ship_date_set' => 'bool',
 'is_sold_by_ab' => 'bool',
-'assigned_ship_from_location_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',
+        'shipping_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',
+        'assigned_ship_from_location_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',
 'fulfillment_instruction' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction',    ];
 
     /**
@@ -121,7 +122,8 @@ class Order implements ModelInterface, ArrayAccess
 'promise_response_due_date' => null,
 'is_estimated_ship_date_set' => null,
 'is_sold_by_ab' => null,
-'assigned_ship_from_location_address' => null,
+        'shipping_address' => null,
+        'assigned_ship_from_location_address' => null,
 'fulfillment_instruction' => null,    ];
 
     /**
@@ -151,6 +153,7 @@ class Order implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'shipping_address' => 'ShippingAddress',
         'amazon_order_id' => 'AmazonOrderId',
 'seller_order_id' => 'SellerOrderId',
 'purchase_date' => 'PurchaseDate',
@@ -227,6 +230,7 @@ class Order implements ModelInterface, ArrayAccess
 'is_estimated_ship_date_set' => 'setIsEstimatedShipDateSet',
 'is_sold_by_ab' => 'setIsSoldByAb',
 'assigned_ship_from_location_address' => 'setAssignedShipFromLocationAddress',
+        'shipping_address' => 'setShippingAddress',
 'fulfillment_instruction' => 'setFulfillmentInstruction',    ];
 
     /**
@@ -268,6 +272,7 @@ class Order implements ModelInterface, ArrayAccess
 'promise_response_due_date' => 'getPromiseResponseDueDate',
 'is_estimated_ship_date_set' => 'getIsEstimatedShipDateSet',
 'is_sold_by_ab' => 'getIsSoldByAb',
+        'shipping_address' => 'getShippingAddress',
 'assigned_ship_from_location_address' => 'getAssignedShipFromLocationAddress',
 'fulfillment_instruction' => 'getFulfillmentInstruction',    ];
 
@@ -404,6 +409,7 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
      */
     public function __construct(array $data = null)
     {
+        $this->container['shipping_address'] = isset($data['shipping_address']) ? $data['shipping_address'] : null;
         $this->container['amazon_order_id'] = isset($data['amazon_order_id']) ? $data['amazon_order_id'] : null;
         $this->container['seller_order_id'] = isset($data['seller_order_id']) ? $data['seller_order_id'] : null;
         $this->container['purchase_date'] = isset($data['purchase_date']) ? $data['purchase_date'] : null;
@@ -1360,6 +1366,30 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     public function setFulfillmentInstruction($fulfillment_instruction)
     {
         $this->container['fulfillment_instruction'] = $fulfillment_instruction;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_address.
+     *
+     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address
+     */
+    public function getShippingAddress()
+    {
+        return $this->container['shipping_address'];
+    }
+
+    /**
+     * Sets shipping_address.
+     *
+     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address $shipping_address shipping_address
+     *
+     * @return $this
+     */
+    public function setShippingAddress($shipping_address)
+    {
+        $this->container['shipping_address'] = $shipping_address;
 
         return $this;
     }

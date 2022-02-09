@@ -669,7 +669,8 @@ class OrdersApi
         $returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\GetOrdersResponse';
         $request = $this->getOrdersRequest($marketplace_ids, $created_after, $created_before, $last_updated_after, $last_updated_before, $order_statuses, $fulfillment_channels, $payment_methods, $buyer_email, $seller_order_id, $max_results_per_page, $easy_ship_shipment_statuses, $next_token, $amazon_order_ids);
 
-        return $this->sendRequest($request, GetOrdersResponse::class);
+        $response =  $this->sendRequest($request, GetOrdersResponse::class);
+        return $response;
     }
 
     /**
