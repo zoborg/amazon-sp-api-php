@@ -10,7 +10,7 @@
 /**
  * Selling Partner API for Reports.
  *
- * The Selling Partner API for Reports lets you retrieve and manage a variety of reports that can help selling partners manage their businesses.
+ * The Selling Partner API for Reports lets you retrieve and manage a variety of reportId that can help selling partners manage their businesses.
  *
  * OpenAPI spec version: 2020-09-04
  */
@@ -46,8 +46,8 @@ class CreateReportResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'payload' => '\ClouSale\AmazonSellingPartnerAPI\Models\Reports\CreateReportResult',
-'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Reports\ErrorList',    ];
+        'reportId' => 'string',
+        'errors' => '\ClouSale\AmazonSellingPartnerAPI\Models\Reports\ErrorList',    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -55,8 +55,8 @@ class CreateReportResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $swaggerFormats = [
-        'payload' => null,
-'errors' => null,    ];
+        'reportId' => null,
+        'errors' => null,    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -85,8 +85,8 @@ class CreateReportResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'payload' => 'payload',
-'errors' => 'errors',    ];
+        'reportId' => 'reportId',
+        'errors' => 'errors',    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -94,8 +94,8 @@ class CreateReportResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'payload' => 'setPayload',
-'errors' => 'setErrors',    ];
+        'reportId' => 'setReportId',
+        'errors' => 'setErrors',    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -103,8 +103,8 @@ class CreateReportResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'payload' => 'getPayload',
-'errors' => 'getErrors',    ];
+        'reportId' => 'getReportId',
+        'errors' => 'getErrors',    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -162,7 +162,7 @@ class CreateReportResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['payload'] = isset($data['payload']) ? $data['payload'] : null;
+        $this->container['reportId'] = isset($data['reportId']) ? $data['reportId'] : null;
         $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
 
@@ -194,9 +194,9 @@ class CreateReportResponse implements ModelInterface, ArrayAccess
      *
      * @return \ClouSale\AmazonSellingPartnerAPI\Models\Reports\CreateReportResult
      */
-    public function getPayload()
+    public function getReportId()
     {
-        return $this->container['payload'];
+        return $this->container['reportId'];
     }
 
     /**
@@ -206,9 +206,9 @@ class CreateReportResponse implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPayload($payload)
+    public function setReportId($payload)
     {
-        $this->container['payload'] = $payload;
+        $this->container['reportId'] = $payload;
 
         return $this;
     }
